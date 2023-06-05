@@ -3229,7 +3229,7 @@ fieldset:disabled .btn {
   color: black;
 }
 .f-24 {
-  font-size: 24px;
+  font-size: clamp(16px, 4vw, 27px);
 }
 .custom-border {
   border-top: 1.5px solid #33bdbe;
