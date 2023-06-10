@@ -434,6 +434,10 @@ kbd kbd {
   padding: 0;
   font-size: 1em;
 }
+.content-bg-color {
+  background-color: #feedd4;
+  height: 400px;
+}
 
 figure {
   margin: 0 0 1rem;
