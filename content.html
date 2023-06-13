@@ -7,6 +7,15 @@
     <title>Content </title>
     <link href="./assets/css/bootstrap.css" rel="stylesheet" />
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+<style>
+  :root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+
+</style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -105,10 +114,176 @@
             </form>
           </div>
         </div>
-      </nav>
-      <div class="content-bg-color">
+    </nav>
+      <div class="content-bg-color pt-4">
+       <div class="container-fluid">
+       <div class="background-white ">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-2">
+                <div class="p-3">
+                    <img src="./assets/img/content/face-icon.svg"  class="img-thumbnail border-0"/>
+                </div>
+            </div>
+            <div class="col-lg-7">
+              <h2  clas="full-width-heading"style="font-size: xx-large;">What is web storage in HTML5?</h2>
+            </div>
+            <div class="col-lg-3">
+              <div class="d-flex justify-content-around">
+                <div class="views-button  rounded">1700 Views</div>
+                <div class="heart-button rounded">
+                  <img src="./assets/img/content/heart.svg" class="mx-2"/>
+                  700
+                </div>
+              </div>
+            </div>
+        </div>
+        <div >
+          <img src="./assets/img/content/content-header.png" width="100%"/>
+        </div> 
+        <div class=" bg-feedback m-4">
+          <div class="row">
+            <div class="col-lg-4 d-block d-md-flex flex-wrap  justify-content-md-between mx-2" style="color: white;">
+                <div>
+                  <img src="./assets/img/detail/time.svg" alt="time" class="pl-2">
+                  1 years ago</div>
+                <div>
+                  <img src="./assets/img/detail/profile.svg" alt="time" class="pl-2">
+                  
+                  ZaidBin Khalid</div>
+                <div>
+                  <img src="./assets/img/detail/eye.svg" alt="time" class="pl-2">
+                  
+                  100000 Views</div>
+                <div>
+                  <img src="./assets/img/detail/heart.svg" alt="time" class="pl-2">
+                  
+                  20</div>
+            </div>
+          </div>
+        </div>
+       
+       </div><!-- background-white END -->
+       <div class="row">
+        <div class="col-lg-6">
+          <div>
+            <img src="./assets/img/detail/google.png" width="100%" class="border-0">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div>
+            <img src="./assets/img/detail/detail.png" class=" border-0" width="100%">
+          </div>
+        </div>
+      </div>
+
+      <div class="text-content container-fluid text-justify">
+        <p style="font-family: Inter ">
+          This tutorial will show you how to use the HTML5 web storage feature to store data on the user’s browser.
+        </p>
+        <h1 style="color:#FF3500; font-size: 1.7vw; font-weight: bold;" >What is Web Storage ?</h1>
+        <p >Similar to cookies, HTML5’s web storage feature allows you to store certain information locally on 
+          the user’s computer, but it is much faster and better. Web storage, on the other hand, is no more 
+          secure than cookies.To learn more about cookies, please see the PHP cookies tutorial.
+        </br> </br>
+        In contrast to cookies, which send data to the server for every request, the information stored in the web store is not sent to the webserver. Furthermore, where cookies allow you to store a 
+        small amount of data (roughly 4KB), web storage allows you to store up to 5MB of data.
+        <br><br>
+        The scope and lifetime of two types of web storage differ:
+        <ul>
+          <li><b>Local Storage  -</b> 
+            The local storage object is used to store data for your entire website on an permanent basis. 
+            That means that unless you delete the stored local data, it will be usable the next day, week, or year.
+          </li>
+          <li><b>Session storage -</b>
+            The sessionStorage object is used to store data for a single browser window or tab on a temporary basis. 
+            When a session ends, i.e. when the user closes the browser window or tab, the data is removed.
+          </li>
+        </ul>
+      All major modern web browsers, including Firefox, Chrome, Opera, Safari, and Internet Explorer 8 and above, support HTML5’s web storage feature.
+        </p>
+        <h1 style="color:#FF3500; font-size: 1.7vw; font-weight: bold;">The local Storage Object</h1>
+       <p class="text-content">
+        As previously mentioned, the data is stored in the local Storage object with no expiration date. A key/value pair is used to store each piece of data. The name of the information is identified by the key (such as ‘first name’),
+         and the value is the value associated with that key (such as ‘Peter’). Here’s an illustration:
+       </p>
+       <p style="border-left:3px solid #33BDBE; padding-left: 2vw;" >
+        // Check if the localStorage object exists</br>
+        if(localStorage) {</br>
+        // Store data     </br>
+        localStorage.setItem("first_name", "Peter");</br>
+   
+        // Retrieve data</br>
+        alert("Hi, " + localStorage.getItem("first_name"));</br>
+        } else {</br>
+        alert("Sorry, your browser do not support local storage.");</br>
+        }
+   
+      </p>
+      <h1 style="color:#FF3500; font-size: 1.7vw; font-weight: bold;">Example explained:</h1>
+      <p class="text-content">
+        The following is the meaning of the JavaScript code above:
+        <ul>
+          <li>
+            <b>localStorage.setItem(key, value)</b>
+            The value associated with a key is stored in the this.
+          </li>
+          <li>
+            <b>localStorage.getItem(key)</b>
+            The value associated with the key is retrieved.
+          </li>
+        </ul>
+  
+          You can also delete a specific item from the storage if it exists by calling the removeItem()
+           method with the main name, such as localStorage.removeItem(“first name”).
+      </br>
+    </br>
+      If you want to clear all of the storage, use the clear() form, such as localStorage.clear (). Since the clear() method takes no arguments and simply
+       removes all key/value pairs from localStorage at once, it should be used with caution.
+      </p>
 
       </div>
+      <!-- Google adds -->
+      <div class="row">
+  <div class="col-lg-3">
+    <img src="./assets/img/detail/google.png" width="100%" class="img-thumbnail border-0"/>
+
+  </div>
+  <div class="col-lg-3">
+    <img src="./assets/img/detail/google.png" class="img-thumbnail border-0"/>
+
+  </div>
+  <div class="col-lg-3">
+    <img src="./assets/img/detail/google.png" class="img-thumbnail border-0"/>
+
+  </div>
+  <div class="col-lg-3">
+    <img src="./assets/img/detail/google.png" class="img-thumbnail border-0"/>
+
+  </div>
+
+      </div>
+      <!-- End google Adds -->
+    </hr style="border:1px solid green">
+    <div style="border: 1px solid red;"></div>
+    <h2 class="text-center mt-3" style="color: red;">Related Posts You Might Also Like</h2>
+  </div>
+  <div class="row justify-content-between">
+    <div class="col-lg-4">
+      <img src="./assets/img/content/whatiscoding.png" height="200px"  width="100%" class="img-responsive"/>
+    </div>
+    <div class="col-lg-4">
+      <img src="./assets/img/content/codingproject.png" height="200px"  width="100%"  class="img-responsive"/>
+
+    </div>
+    <div class="col-lg-4">
+      <img src="./assets/img/content/python.png" height="200px"  width="100%"  class="img-responsive"/>
+
+    </div>
+   </div>
+
+       </div><!-- container-fluid END -->
+       
+   
 
       <footer class="bg-light" >
         <div class="container-fluid">

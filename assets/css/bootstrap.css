@@ -434,11 +434,38 @@ kbd kbd {
   padding: 0;
   font-size: 1em;
 }
+.full-width-heading {
+  width: 100%;
+}
 .content-bg-color {
   background-color: #feedd4;
-  height: 400px;
 }
-
+.text-content {
+  font-family: "Inter";
+  font-weight: 300;
+  font-size: 1.7vw;
+}
+.text-justify {
+  text-align: justify;
+}
+.bg-feedback {
+  background-color: #33bdbe;
+  padding: 10px;
+}
+.heart-button {
+  background-color: #ff3500;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.views-button {
+  background-color: #e6fafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
 figure {
   margin: 0 0 1rem;
 }
@@ -713,6 +740,9 @@ progress {
   padding-left: 0;
   list-style: none;
 }
+.background-white {
+  background-color: white;
+}
 .footer-button {
   background-color: #434343;
   color: #fff;
@@ -757,7 +787,7 @@ progress {
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: var(--bs-body-bg);
+  /* background-color: var(--bs-body-bg); */
   border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
   max-width: 100%;
@@ -5401,10 +5431,6 @@ input[type="search"] {
 .list-group-item-action:active {
   color: var(--bs-list-group-action-active-color);
   background-color: var(--bs-list-group-action-active-bg);
-}
-
-ul {
-  list-style-image: url("../img/home/Polygon.svg");
 }
 
 .list-group-item {
